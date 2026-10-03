@@ -1,224 +1,1350 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>RUDHIX | Premium Indian Consumer Brand</title>
+<title>RUDHIX | Strong Start. Strong RUDHIX.</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
+<meta name="description" content="RUDHIX is an emerging Indian consumer brand starting with RUDHIX Kadak Tea and building towards a wider range of everyday consumer products.">
+
+<style>
+:root{
+    --black:#050505;
+    --black2:#0b0b0b;
+    --black3:#111111;
+    --gold:#d4af37;
+    --gold2:#f1d77a;
+    --white:#ffffff;
+    --text:#eeeeee;
+    --muted:#a9a9a9;
+    --border:rgba(212,175,55,.25);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--black);
+    color:var(--white);
+    line-height:1.7;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ================= NAVBAR ================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(5,5,5,.95);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid var(--border);
+}
+
+.nav{
+    min-height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.brand img{
+    width:50px;
+    height:50px;
+    object-fit:contain;
+}
+
+.brand-name{
+    color:var(--gold2);
+    font-size:22px;
+    font-weight:800;
+    letter-spacing:4px;
+}
+
+.nav-links{
+    display:flex;
+    gap:27px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:#ddd;
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--gold2);
+}
+
+.menu{
+    display:none;
+    color:var(--gold2);
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    background:
+    radial-gradient(circle at 80% 40%,rgba(212,175,55,.15),transparent 35%),
+    radial-gradient(circle at 20% 80%,rgba(212,175,55,.06),transparent 30%),
+    linear-gradient(135deg,#050505,#111111);
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:60px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 17px;
+    border:1px solid var(--border);
+    border-radius:50px;
+    color:var(--gold2);
+    font-size:11px;
+    letter-spacing:2px;
+    margin-bottom:24px;
+}
+
+.hero h1{
+    font-size:clamp(48px,7vw,85px);
+    line-height:1;
+    letter-spacing:-3px;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:var(--gold2);
+}
+
+.hero p{
+    max-width:620px;
+    color:var(--muted);
+    font-size:18px;
+    margin-bottom:34px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    border-radius:5px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-gold{
+    background:var(--gold);
+    color:#000;
+}
+
+.btn-gold:hover{
+    background:var(--gold2);
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+    border:1px solid var(--gold);
+    color:var(--gold2);
+}
+
+.btn-outline:hover{
+    background:rgba(212,175,55,.1);
+}
+
+.hero-product{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.product-glow{
+    padding:40px;
+    border-radius:50%;
+    background:radial-gradient(circle,rgba(212,175,55,.18),transparent 65%);
+}
+
+.hero-product img{
+    width:auto;
+    max-height:520px;
+    filter:drop-shadow(0 30px 40px rgba(0,0,0,.8));
+}
+
+/* ================= GENERAL ================= */
+
+section{
+    padding:105px 0;
+}
+
+.section-head{
+    max-width:780px;
+    text-align:center;
+    margin:0 auto 60px;
+}
+
+.eyebrow{
+    color:var(--gold2);
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:12px;
+    margin-bottom:12px;
+}
+
+.section-head h2{
+    font-size:clamp(34px,5vw,55px);
+    line-height:1.15;
+    margin-bottom:17px;
+}
+
+.section-head p{
+    color:var(--muted);
+}
+
+/* ================= STATS ================= */
+
+.stats{
+    background:#080808;
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.stat{
+    text-align:center;
+    padding:35px 20px;
+    border-right:1px solid var(--border);
+}
+
+.stat:last-child{
+    border-right:0;
+}
+
+.stat h3{
+    color:var(--gold2);
+    font-size:35px;
+    margin-bottom:4px;
+}
+
+.stat p{
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* ================= SHOP ================= */
+
+.shop{
+    background:#070707;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+    max-width:950px;
+    margin:auto;
+}
+
+.product-card{
+    overflow:hidden;
+    border:1px solid var(--border);
+    border-radius:18px;
+    background:linear-gradient(145deg,#151515,#080808);
+    transition:.4s;
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
+    border-color:rgba(212,175,55,.65);
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+}
+
+.product-image{
+    height:390px;
+    padding:25px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(145deg,#191919,#080808);
+}
+
+.product-image img{
+    max-height:340px;
+    width:auto;
+    object-fit:contain;
+}
+
+.product-info{
+    padding:30px;
+}
+
+.product-info .sub{
+    color:var(--gold2);
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+.product-info h3{
+    font-size:28px;
+    margin:7px 0;
+}
+
+.product-info p{
+    color:var(--muted);
+    margin:13px 0;
+}
+
+.price{
+    color:var(--gold2);
+    font-size:26px;
+    font-weight:bold;
+    margin:18px 0;
+}
+
+.order-btn{
+    width:100%;
+    text-align:center;
+}
+
+/* ================= STORY ================= */
+
+.story{
+    background:
+    radial-gradient(circle at 15% 20%,rgba(212,175,55,.08),transparent 30%),
+    #090909;
+}
+
+.story-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.story-box{
+    padding:42px;
+    border:1px solid var(--border);
+    border-radius:18px;
+    background:rgba(255,255,255,.02);
+}
+
+.story-box h3{
+    color:var(--gold2);
+    font-size:29px;
+    margin-bottom:20px;
+}
+
+.story-box p{
+    color:#c2c2c2;
+    margin-bottom:17px;
+}
+
+/* ================= FOUNDER ================= */
+
+.founder{
+    background:#0a0a0a;
+}
+
+.founder-grid{
+    display:grid;
+    grid-template-columns:.75fr 1.25fr;
+    gap:60px;
+    align-items:center;
+}
+
+.founder-card{
+    padding:38px;
+    border:1px solid var(--border);
+    border-radius:20px;
+    text-align:center;
+    background:linear-gradient(145deg,#151515,#080808);
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
+}
+
+.founder-photo{
+    width:250px;
+    height:310px;
+    object-fit:cover;
+    border-radius:18px;
+    margin:0 auto 25px;
+    border:1px solid var(--gold);
+    box-shadow:0 20px 45px rgba(0,0,0,.65);
+}
+
+.founder-card h3{
+    font-size:27px;
+    margin-bottom:3px;
+}
+
+.founder-card p{
+    color:var(--gold2);
+    font-size:14px;
+}
+
+.founder-content .eyebrow{
+    margin-bottom:8px;
+}
+
+.founder-content h3{
+    font-size:38px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.founder-content p{
+    color:#bdbdbd;
+    margin-bottom:18px;
+}
+
+/* ================= VALUES ================= */
+
+.values{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.value{
+    padding:34px;
+    border:1px solid var(--border);
+    border-radius:16px;
+    background:#0b0b0b;
+    transition:.3s;
+}
+
+.value:hover{
+    transform:translateY(-5px);
+}
+
+.value-number{
+    color:var(--gold2);
+    font-size:12px;
+    letter-spacing:2px;
+}
+
+.value h3{
+    font-size:24px;
+    margin:12px 0;
+}
+
+.value p{
+    color:var(--muted);
+}
+
+/* ================= WHY ================= */
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.why{
+    display:flex;
+    gap:18px;
+    padding:27px;
+    border:1px solid var(--border);
+    border-radius:15px;
+    background:#0b0b0b;
+}
+
+.icon{
+    min-width:48px;
+    height:48px;
+    border:1px solid var(--gold);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--gold2);
+    font-size:13px;
+    font-weight:bold;
+}
+
+.why h3{
+    margin-bottom:5px;
+}
+
+.why p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* ================= PROCESS ================= */
+
+.process{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.step{
+    padding:30px;
+    text-align:center;
+}
+
+.step-num{
+    width:58px;
+    height:58px;
+    margin:0 auto 18px;
+    border-radius:50%;
+    background:var(--gold);
+    color:#000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.step h3{
+    margin-bottom:8px;
+    font-size:22px;
+}
+
+.step p{
+    color:var(--muted);
+}
+
+/* ================= VISION ================= */
+
+.vision{
+    background:
+    linear-gradient(135deg,#0c0c0c,#171207);
+}
+
+.vision-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.vision-card{
+    padding:45px;
+    border:1px solid var(--border);
+    border-radius:18px;
+}
+
+.vision-card h3{
+    color:var(--gold2);
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.vision-card p{
+    color:#c5c5c5;
+}
+
+/* ================= FAQ ================= */
+
+.faq{
+    max-width:850px;
+    margin:auto;
+}
+
+details{
+    border-bottom:1px solid var(--border);
+    padding:21px 0;
+}
+
+summary{
+    cursor:pointer;
+    font-weight:bold;
+    font-size:17px;
+}
+
+details p{
+    color:var(--muted);
+    padding-top:12px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+    background:#080808;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.contact-card{
+    padding:42px;
+    border:1px solid var(--border);
+    border-radius:18px;
+    background:#0d0d0d;
+}
+
+.contact-card h3{
+    font-size:29px;
+    margin-bottom:12px;
+}
+
+.contact-card p{
+    color:var(--muted);
+    margin-bottom:13px;
+}
+
+.contact-link{
+    display:block;
+    color:var(--gold2);
+    margin-top:14px;
+}
+
+.whatsapp{
+    margin-top:24px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    padding:50px 0 25px;
+    background:#030303;
+    border-top:1px solid var(--border);
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr;
+    gap:40px;
+}
+
+footer h3{
+    color:var(--gold2);
+    margin-bottom:15px;
+}
+
+footer p,
+footer a{
+    color:#999;
+    font-size:14px;
+}
+
+.footer-links a{
+    display:block;
+    margin-bottom:9px;
+}
+
+.copyright{
+    text-align:center;
+    color:#666;
+    font-size:12px;
+    border-top:1px solid #181818;
+    margin-top:40px;
+    padding-top:22px;
+}
+
+/* ================= ANIMATION ================= */
+
+.fade{
+    animation:fadeUp 1s ease both;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:850px){
+
+    .nav-links{
+        position:absolute;
+        left:0;
+        top:78px;
+        width:100%;
+        background:#080808;
+        border-bottom:1px solid var(--border);
+        display:none;
+        flex-direction:column;
+        padding:25px;
+        gap:20px;
     }
 
-    body {
-      background: #050505;
-      color: white;
+    .nav-links.active{
+        display:flex;
     }
 
-    header {
-      padding: 20px;
-      text-align: center;
-      border-bottom: 1px solid #333;
+    .menu{
+        display:block;
     }
 
-    header img {
-      width: 180px;
-      max-width: 70%;
+    .hero{
+        min-height:auto;
+        padding:85px 0;
+        text-align:center;
     }
 
-    nav {
-      margin-top: 15px;
+    .hero-grid,
+    .story-grid,
+    .founder-grid,
+    .vision-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
     }
 
-    nav a {
-      color: #d4af37;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 14px;
+    .hero p{
+        margin-left:auto;
+        margin-right:auto;
     }
 
-    .hero {
-      text-align: center;
-      padding: 70px 20px;
-      background: linear-gradient(180deg, #111, #050505);
+    .buttons{
+        justify-content:center;
     }
 
-    .hero h1 {
-      font-size: 42px;
-      color: #d4af37;
-      margin-bottom: 15px;
+    .hero-product{
+        margin-top:40px;
     }
 
-    .hero p {
-      color: #ddd;
-      font-size: 18px;
-      line-height: 1.6;
+    .products{
+        grid-template-columns:1fr;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 13px 28px;
-      background: #d4af37;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    .section {
-      padding: 55px 20px;
-      text-align: center;
+    .stat:nth-child(2){
+        border-right:0;
     }
 
-    .section h2 {
-      color: #d4af37;
-      font-size: 30px;
-      margin-bottom: 30px;
+    .stat:nth-child(1),
+    .stat:nth-child(2){
+        border-bottom:1px solid var(--border);
     }
 
-    .product {
-      max-width: 850px;
-      margin: auto;
-      padding: 25px;
-      border: 1px solid #333;
-      border-radius: 12px;
-      background: #101010;
+    .values,
+    .why-grid,
+    .process{
+        grid-template-columns:1fr;
     }
 
-    .product img {
-      width: 100%;
-      max-width: 650px;
-      border-radius: 10px;
+    .footer-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+}
+
+@media(max-width:500px){
+
+    section{
+        padding:75px 0;
     }
 
-    .product h3 {
-      margin-top: 25px;
-      font-size: 28px;
-      color: #d4af37;
+    .hero h1{
+        font-size:48px;
     }
 
-    .product p {
-      margin-top: 12px;
-      color: #ccc;
-      line-height: 1.6;
+    .hero p{
+        font-size:16px;
     }
 
-    .about {
-      max-width: 850px;
-      margin: auto;
-      color: #ccc;
-      line-height: 1.8;
-      font-size: 17px;
+    .product-image{
+        height:310px;
     }
 
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      border-top: 1px solid #333;
-      color: #888;
+    .story-box,
+    .founder-card,
+    .vision-card,
+    .contact-card{
+        padding:28px;
     }
 
-    footer strong {
-      color: #d4af37;
+    .founder-photo{
+        width:210px;
+        height:270px;
     }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <img src="rudhix-logo.jpg"
-         alt="RUDHIX Logo">
+<!-- ================= NAVIGATION ================= -->
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#shop">Shop</a>
-      <a href="#about">About RUDHIX</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<header>
+<div class="container nav">
 
-  <section class="hero" id="home">
-    <h1>RUDHIX</h1>
+<a href="#home" class="brand">
+<img src="rudhix-logo.jpg" alt="RUDHIX Logo">
+<span class="brand-name">RUDHIX</span>
+</a>
 
-    <p>
-      Premium Indian Consumer Brand<br>
-      Strong Quality. Trusted Products.
-    </p>
+<div class="menu" onclick="toggleMenu()">☰</div>
 
-    <a href="#shop" class="btn">EXPLORE RUDHIX</a>
-  </section>
+<ul class="nav-links" id="navLinks">
+<li><a href="#home">Home</a></li>
+<li><a href="#shop">Shop</a></li>
+<li><a href="#story">Our Story</a></li>
+<li><a href="#founder">Founder</a></li>
+<li><a href="#vision">Vision</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 
-  <section class="section" id="shop">
-    <h2>RUDHIX KADAK TEA</h2>
+</div>
+</header>
 
-    <div class="product">
 
-      <img src="rudhix-tea.jpg"
-           alt="RUDHIX Kadak Tea">
+<!-- ================= HERO ================= -->
 
-      <h3>RUDHIX Kadak Tea</h3>
+<section class="hero" id="home">
 
-      <p>
-        Strong aroma, rich taste and a memorable tea experience
-        in every cup.
-      </p>
+<div class="container hero-grid">
 
-      <p>
-        Available in 100g and 250g packs.
-      </p>
+<div class="fade">
 
-      <a href="#contact" class="btn">ORDER / ENQUIRE</a>
+<div class="badge">
+PREMIUM INDIAN CONSUMER BRAND
+</div>
 
-    </div>
-  </section>
+<h1>
+Strong Start.<br>
+<span>Strong RUDHIX.</span>
+</h1>
 
-  <section class="section" id="about">
-    <h2>ABOUT RUDHIX</h2>
+<p>
+RUDHIX is an emerging Indian consumer brand beginning with
+RUDHIX Kadak Tea — built around quality, consistency and trust,
+with a vision to grow into more everyday consumer products.
+</p>
 
-    <div class="about">
-      <p>
-        RUDHIX is an Indian consumer brand starting with
-        RUDHIX Kadak Tea.
-      </p>
+<div class="buttons">
 
-      <br>
+<a href="#shop" class="btn btn-gold">
+Explore Products
+</a>
 
-      <p>
-        Our vision is to build RUDHIX into a trusted brand
-        offering quality everyday products across different
-        categories over time.
-      </p>
+<a href="#story" class="btn btn-outline">
+Discover RUDHIX
+</a>
 
-      <br>
+</div>
 
-      <p>
-        We believe in starting small, building a strong foundation
-        and growing step by step.
-      </p>
-    </div>
-  </section>
+</div>
 
-  <section class="section" id="contact">
-    <h2>CONTACT RUDHIX</h2>
+<div class="hero-product">
 
-    <p style="color:#ccc; line-height:2;">
-      For orders and business enquiries<br>
-      📞 9936005815<br>
-      ✉️ rudhixofficial@gmail.com
-    </p>
-  </section>
+<div class="product-glow">
 
-  <footer>
-    <strong>RUDHIX</strong><br>
-    Pure Quality. Pure Trust.<br><br>
-    © 2026 RUDHIX. All Rights Reserved.
-  </footer>
+<img src="rudhix-tea.jpg"
+alt="RUDHIX Kadak Tea">
 
-</body>
-</html>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= STATS ================= -->
+
+<section class="stats">
+
+<div class="container stats-grid">
+
+<div class="stat">
+<h3>01</h3>
+<p>Starting Product</p>
+</div>
+
+<div class="stat">
+<h3>100g</h3>
+<p>Tea Pack</p>
+</div>
+
+<div class="stat">
+<h3>250g</h3>
+<p>Tea Pack</p>
+</div>
+
+<div class="stat">
+<h3>∞</h3>
+<p>Future Possibilities</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SHOP ================= -->
+
+<section class="shop" id="shop">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="eyebrow">
+Shop RUDHIX
+</div>
+
+<h2>
+RUDHIX Kadak Tea
+</h2>
+
+<p>
+Our journey begins with tea — created for people who enjoy
+a strong and satisfying cup in their everyday routine.
+</p>
+
+</div>
+
+
+<div class="products">
+
+<!-- 100G -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<img src="rudhix-tea.jpg"
+alt="RUDHIX Kadak Tea 100g">
+
+</div>
+
+<div class="product-info">
+
+<div class="sub">
+RUDHIX KADAK TEA
+</div>
+
+<h3>
+100g Pack
+</h3>
+
+<p>
+A convenient everyday pack for your regular tea moments.
+</p>
+
+<div class="price">
+₹28
+</div>
+
+<a class="btn btn-gold order-btn"
+href="https://wa.me/919936005815?text=Hello%20RUDHIX,%20I%20want%20to%20order%20100g%20RUDHIX%20Kadak%20Tea."
+target="_blank">
+
+Order on WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 250G -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<img src="rudhix-tea.jpg"
+alt="RUDHIX Kadak Tea 250g">
+
+</div>
+
+<div class="product-info">
+
+<div class="sub">
+RUDHIX KADAK TEA
+</div>
+
+<h3>
+250g Pack
+</h3>
+
+<p>
+A larger pack for households and regular tea lovers.
+</p>
+
+<div class="price">
+₹63
+</div>
+
+<a class="btn btn-gold order-btn"
+href="https://wa.me/919936005815?text=Hello%20RUDHIX,%20I%20want%20to%20order%20250g%20RUDHIX%20Kadak%20Tea."
+target="_blank">
+
+Order on WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= OUR STORY ================= -->
+
+<section class="story" id="story">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="eyebrow">
+The Beginning
+</div>
+
+<h2>
+The RUDHIX Story
+</h2>
+
+<p>
+Every big brand begins somewhere. RUDHIX begins with a simple idea:
+start small, learn continuously and build with purpose.
+</p>
+
+</div>
+
+
+<div class="story-grid">
+
+<div class="story-box">
+
+<h3>
+Built From a Small Beginning
+</h3>
+
+<p>
+RUDHIX started with a simple goal — to create a consumer brand
+that customers can gradually learn to trust.
+</p>
+
+<p>
+The journey began with RUDHIX Kadak Tea, giving the brand an
+opportunity to understand products, packaging, customers,
+retailers and the realities of building a business.
+</p>
+
+<p>
+Rather than trying to become everything at once, RUDHIX is being
+built step by step — focusing on the foundation first and
+expansion later.
+</p>
+
+</div>
+
+
+<div class="story-box">
+
+<h3>
+From Tea to a Bigger Vision
+</h3>
+
+<p>
+Tea is only the beginning of the RUDHIX journey.
+</p>
+
+<p>
+Over time, the brand aims to explore more everyday consumer
+categories, including spices, dry fruits and other products where
+quality and customer trust can remain at the centre.
+</p>
+
+<p>
+The long-term goal is simple: build RUDHIX into a trusted Indian
+consumer brand, one product and one customer at a time.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOUNDER ================= -->
+
+<section class="founder" id="founder">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="eyebrow">
+Founder’s Story
+</div>
+
+<h2>
+Building RUDHIX
+</h2>
+
+<p>
+A young journey of learning, experimenting and building something
+step by step.
+</p>
+
+</div>
+
+
+<div class="founder-grid">
+
+<div class="founder-card">
+
+<img src="anirudh-founder.jpg"
+alt="Anirudh Yadav - Founder of RUDHIX"
+class="founder-photo">
+
+<h3>
+Anirudh Yadav
+</h3>
+
+<p>
+Founder’s Story
+</p>
+
+</div>
+
+
+<div class="founder-content">
+
+<div class="eyebrow">
+THE JOURNEY
+</div>
+
+<h3>
+Building something from a small beginning.
+</h3>
+
+<p>
+RUDHIX represents a journey that started with a simple ambition:
+to build something meaningful from a small beginning.
+</p>
+
+<p>
+The founder’s journey is centred around learning — understanding
+customers, products, packaging, pricing, sales and the discipline
+required to keep improving.
+</p>
+
+<p>
+Starting with RUDHIX Kadak Tea, the goal is not to rush the journey,
+but to build a strong foundation and gradually explore new
+consumer categories.
+</p>
+
+<p>
+The RUDHIX journey is about starting small, learning every day
+and building step by step.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PRINCIPLES ================= -->
+
+<section>
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="eyebrow">
+What We Believe
+</div>
+
+<h2>
+RUDHIX Principles
+</h2>
+
+</div>
+
+
+<div class="values">
+
+<div class="value">
+
+<div class="value-number">
+01 — QUALITY
+</div>
+
+<h3>
+Quality First
+</h3>
+
+<p>
+We aim to build products with attention to product quality,
+packaging and consistency.
+</p>
+
+</div>
+
+
+<div class="value">
+
+<div class="value-number">
+02 — TRUST
+</div>
+
+<h3>
+Earn Trust
+</h3>
+
+<p>
+A brand is built through customers who choose it again and
+recommend it to others.
+</p>
+
+</div>
+
+
+<div class="value">
+
+<div class="value-number">
+03 — GROWTH
+</div>
+
+<h3>
+Grow Step by Step
+</h3>
+
+<p>
+Start with a strong foundation, learn from the market and expand
+responsibly over time.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= WHY RUDHIX ================= -->
+
+<section class="story">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="eyebrow">
+Why RUDHIX
+</div>
+
+<h2>
+Made With Purpose
+</h2>
+
+<p>
+Our focus is not just putting a product on a shelf.
+It is about building a brand customers can recognize and trust.
+</p>
+
+</div>
+
+
+<div class="why-grid">
+
+<div class="why">
+
+<div class="icon">
+01
+</div>
+
+<div>
+
+<h3>
+Strong Identity
+</h3>
+
+<p>
+A distinctive RUDHIX identity designed to grow across future categories.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="why">
+
+<div class="icon">
+02
+</div>
+
+<div>
+
+<h3>
+Everyday Products
+</h3>
+
+<p>
+Starting
